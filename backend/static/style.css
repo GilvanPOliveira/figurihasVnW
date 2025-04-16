@@ -1,0 +1,272 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: #f4f6f9;
+  color: #333;
+  padding: 40px 20px;
+  line-height: 1.6;
+}
+
+.container {
+  background: #ffffff;
+  padding: 30px;
+  max-width: 960px;
+  margin: auto;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: #1e3a8a;
+  margin-bottom: 16px;
+}
+
+form {
+  padding: 16px 0;
+}
+
+input,
+textarea {
+  width: 100%;
+  margin-bottom: 16px;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ccd6e0;
+  font-size: 15px;
+  background-color: #fafafa;
+  transition: border-color 0.3s ease, background 0.3s ease;
+}
+
+input:focus,
+textarea:focus {
+  border-color: #38bdf8;
+  background-color: #ffffff;
+  outline: none;
+}
+
+textarea {
+  resize: vertical;
+}
+
+button {
+  padding: 12px 24px;
+  background-color: #1e3a8a;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #163076;
+}
+
+button[type="button"] {
+  background-color: #38bdf8;
+}
+
+button[type="button"]:hover {
+  background-color: #0ea5e9;
+}
+
+.button-group {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  background: #f9fafb;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 24px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
+}
+
+a {
+  color: #2563eb;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+img {
+  max-width: 100%;
+  border-radius: 8px;
+}
+
+.form-section {
+  margin-bottom: 48px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid #e2e8f0;
+}
+
+.list-section {
+  margin-top: 48px;
+}
+
+.projeto-bloco {
+  background: #eef2f7;
+  padding: 18px;
+  border-radius: 10px;
+  border: 1px solid #cbd5e1;
+  margin-bottom: 20px;
+}
+
+.projeto-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.remover-projeto {
+  background-color: #ef4444;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.remover-projeto:hover {
+  background-color: #dc2626;
+}
+
+.carrossel-container {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  max-width: 360px;
+  margin-top: 10px;
+}
+
+.carrossel {
+  display: flex;
+  transition: transform 0.4s ease-in-out;
+  will-change: transform;
+}
+
+.carrossel-item {
+  min-width: 99%;
+  background: #ffffff;
+  padding: 16px;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  margin: 2px;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.carrossel-controles {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  margin-top: 8px;
+  margin-left: 6px;
+  margin-right: 3px;
+}
+
+.carrossel-botoes {
+  display: flex;
+  justify-content: end;
+  gap: 12px;
+  align-items: center;
+  margin-left: auto;
+}
+
+.carrossel-btn {
+  background: #1e3a8a;
+  color: white;
+  border: none;
+  padding: 4px 8px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: background-color 0.3s ease;
+}
+
+.carrossel-btn:hover {
+  background-color: #163077;
+}
+
+.aluno-bloco {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 16px;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  background: #f9fafb;
+}
+
+.aluno-info {
+  margin-top: 5px;
+}
+
+.repos-container {
+  display: flex;
+  flex-direction: column;
+  max-height: 300px;
+  overflow-y: auto;
+  border: 1px solid #555;
+  border-radius: 8px;
+  background-color: #f9fafb;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.repo-item {
+  padding: 10px;
+  border-bottom: 1px solid #666;
+  display: flex;
+  align-items: center;
+}
+
+.repo-item:last-child {
+  border-bottom: none;
+}
+
+.repo-item input {
+  width: 30px;
+  margin: 0;
+}
+
+input#github-username {
+  margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 20px;
+  }
+
+  .aluno-bloco {
+    flex-direction: column;
+  }
+
+  .carrossel-container {
+    max-width: 100%;
+  }
+}

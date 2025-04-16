@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Figurinhas Vai na Web - Testes API</title>
+  <meta name="description" content="Figurinhas Vai na Web - Testes API">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="{{ url_for('static', filename='vnw.svg') }}" type="image/x-icon">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <script defer src="{{ url_for('static', filename='script.js') }}"></script>
+</head>
+
+<body>
+  <div class="container">
+    <h1>Figurinhas Vai na Web 🎓 </h1>
+
+    <section class="form-section">
+      <div class="form-section">
+        <h3>🔍 Preenchimento Automático via GitHub</h3>
+        <input type="text" id="github-username" placeholder="Usuário do GitHub">
+        <button type="button" onclick="buscarGitHub()">Buscar do GitHub</button>
+
+      </div>
+
+      <div id="repositorios-lista" style="display: none; margin-top: 20px;">
+        <h4>📚 Selecione até 3 repositórios:</h4>
+        <form id="form-repositorios">
+          <div id="repos-container" class="repos-container"></div>
+          <button type="button" id="btn-adicionar-projetos">Adicionar Projetos Selecionados</button>
+        </form>
+      </div>
+      
+      <h2>📝 Cadastro de Aluno</h2>
+      <form method="POST" action="/cadastro">
+        <input type="hidden" id="aluno-id" name="id">
+        <input type="text" name="nome" placeholder="Seu nome" required>
+        <textarea name="descricao" placeholder="Sobre você" required></textarea>
+        <input type="url" name="perfil_url" placeholder="URL do Perfil" required>
+        <input type="url" name="github_url" placeholder="URL do GitHub">
+        <input type="url" name="linkedin_url" placeholder="URL do LinkedIn">
+        <input type="url" name="portfolio_url" placeholder="URL do Portfólio">
+ 
+          <h3>📦 Projetos (opcional)</h3>
+          <button type="button" onclick="adicionarProjeto()">Adicionar Projeto</button>
+          <div id="projetos-container" style="margin-top: 16px;"></div>
+
+        <div class="button-group">
+          <button type="submit">Cadastrar Aluno(a)</button>
+        </div>
+      </form>
+    </section>
+
+    <section class="form-section">
+      <h2>✏️ Editar Aluno (Buscar por ID)</h2>
+      <form action="javascript:void(0);">
+        <input type="number" id="buscar-id" placeholder="ID do aluno" required>
+        <button type="button" onclick="buscarAluno()">Buscar</button>
+      </form>
+    </section>
+
+    <section class="form-section">
+      <h2>🗑️ Excluir Aluno</h2>
+      <form method="POST" action="/deletar-aluno">
+        <input type="number" name="id" placeholder="ID do aluno" required>
+        <button type="submit" onclick="return confirm('Tem certeza que deseja excluir?')">Excluir</button>
+      </form>
+    </section>
+
+    <section class="list-section">
+      <h2>📋 Alunos Cadastrados</h2>
+      {% if alunos %}
+      <ul>
+        {% for aluno in alunos %}
+        <li class="aluno-bloco">
+          {% if aluno.projetos %}
+          <div class="aluno-projetos">
+            <div class="carrossel-controles">
+              <strong>Projetos:</strong>
+              <div class="carrossel-botoes">
+                <button class="carrossel-btn voltar" data-id="{{ aluno.id }}">&#8592;</button>
+                <button class="carrossel-btn avancar" data-id="{{ aluno.id }}">&#8594;</button>
+              </div>
+            </div>
+            <div class="carrossel-container" data-id="{{ aluno.id }}">
+              <div class="carrossel" id="carrossel-{{ aluno.id }}">
+                {% for projeto in aluno.projetos %}
+                <div class="carrossel-item">
+                  <h4>{{ projeto.titulo }}</h4>
+                  <p>{{ projeto.descricao }}</p>
+                  {% if projeto.imagem_url %}
+                  <img src="{{ projeto.imagem_url }}" alt="Imagem do projeto" style="max-width: 200px; border-radius: 8px;">
+                  {% endif %}
+                  <br>
+                  <a href="{{ projeto.link }}" target="_blank">🔗 Ver projeto</a>
+                </div>
+                {% endfor %}
+              </div>
+            </div>
+          </div>
+          {% endif %}
+          <div class="aluno-info">
+            <strong>ID:</strong> {{ aluno.id }}<br>
+            <strong>Perfil:</strong><br>
+            <img src="{{ aluno.perfil_url }}" alt="Perfil de {{ aluno.nome }}" style="max-width: 100px; border-radius: 50%;"><br>
+            <strong>Nome:</strong> {{ aluno.nome }}<br>
+            <strong>Portfólio:</strong> <a href="{{ aluno.portfolio_url }}" target="_blank">{{ aluno.portfolio_url }}</a><br>
+            <strong>GitHub:</strong> <a href="{{ aluno.github_url }}" target="_blank">{{ aluno.github_url }}</a><br>
+            <strong>LinkedIn:</strong> <a href="{{ aluno.linkedin_url }}" target="_blank">{{ aluno.linkedin_url }}</a><br>
+            <strong>Descrição:</strong> {{ aluno.descricao }}<br>
+          </div>
+        </li>
+        {% endfor %}
+      </ul>
+      {% else %}
+      <p>Nenhum aluno cadastrado ainda.</p>
+      {% endif %}
+    </section>
+
+  </div>
+</body>
+
+</html>
