@@ -101,52 +101,33 @@ npm run dev
 
 ## 🤝 Contribuição
 
-Olá! Obrigado por querer contribuir com o projeto **Figurinhas Vai na Web** 🎉
+Quer contribuir com este projeto? Ótimo!  
 
-## 🛠 Passo a passo para contribuir
-1. Faça um fork do repositório
-2. Clone o fork
-```bash
-git clone https://github.com/GilvanPOliveira/figurihasVnW
-```
-3. Crie uma branch com sua funcionalidade
-```bash
-git checkout -b minha-nova-funcionalidade
-```
-4. Faça suas alterações e envie um Pull Request ✨
+Confira o nosso [Guia de Contribuição](CONTRIBUTING.md) para entender as regras e diretrizes.
 
-## ✅ Regras de contribuição
-- Use mensagens de commit claras e descritivas
-- Mantenha o padrão de código do projeto
-- Teste antes de enviar seu PR
-
----
-
-Com sua ajuda, este projeto pode crescer e impactar ainda mais estudantes da tecnologia! 🚀
+Obrigado por querer colaborar! 💙
 
 ---
 
 ## 📄 Licença
 
-MIT License
+Este projeto está licenciado sob os termos da [Licença MIT](LICENSE).  
+Você pode usar, modificar e distribuir conforme os termos descritos.
 
-Copyright (c) 2025 Gilvan Oliveira
+Sinta-se à vontade para explorar, reutilizar e compartilhar! 🚀
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+---
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
+## 🛠 Tecnologias Utilizadas
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+[![My Skills](https://skillicons.dev/icons?i=html,css,sass,javascript,react,vite,python,flask,postgresql,git,github,stackoverflow,vercel,remix,vscode&perline=10)](https://figurihas-vnw.vercel.app/)
+
+---
+
+## 📬 Contato
+
+Se tiver dúvidas ou sugestões, fique à vontade para entrar em contato:
+- E-mail: gilvanoliveira06@gmail.com
+- Portifólio: [Gilvan Oliveira](https://gilvanpoliveira.github.io/)
+
 
