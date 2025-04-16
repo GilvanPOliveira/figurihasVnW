@@ -1,0 +1,31 @@
+# Ignorar variáveis de ambiente
+.env
+
+# Arquivos e pastas do Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Cache e logs
+*.log
+
+# Banco de dados local
+*.sqlite3
+
+# IDEs
+.vscode/
+.idea/
+
+# Arquivos temporários
+.DS_Store
+*.swp
+
+# Python virtualenv
+venv/
+.venv/
+
+# Node.js/Vite
+node_modules/
+dist/
+build/
