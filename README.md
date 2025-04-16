@@ -1,4 +1,5 @@
-<div align="center"><img src="https://github.com/user-attachments/assets/74494a11-8dcc-41be-8710-a4487689b0c7" width="15%" /></div>
+<div align="center"><img src="https://github.com/user-attachments/assets/bc7c6790-e362-4270-a35d-07a5404962f6" width="15%" /></div>
+
 
 # Figurinhas Vai na Web 🎓 
 
