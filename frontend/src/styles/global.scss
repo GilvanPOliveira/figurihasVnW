@@ -1,0 +1,44 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(to bottom, #1d3643, #f9e0b8) repeat fixed;
+  background-size: cover;
+  font-family: "Nunito", sans-serif;
+  color: #1d3643;          
+  line-height: 1.6;
+}
+
+a {
+  color: #1e3a8a;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+button {
+  cursor: pointer;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  transition: background 0.3s ease;
+}
+
+input,
+textarea {
+  font-family: inherit;
+  border: none;
+  border-radius: 8px;
+  padding: 10px;
+  background-color: #fff;
+  font-size: 1rem;
+}
+
+ul {
+  list-style: none;
+}
